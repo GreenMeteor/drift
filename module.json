@@ -1,0 +1,10 @@
+{
+	"id": "drift",
+	"name": "Drift Chat",
+	"description": "Applies a Drift chat bubble.",
+	"keywords": ["drift"],
+	"version": "1.0.0",
+	"humhub": {
+		"minVersion": "1.0"
+	}
+}
