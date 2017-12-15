@@ -8,8 +8,8 @@ use humhub\models\Setting;
 ?>
 
 <?= Html::beginTag('div') ?>
-<!-- Start of Async Drift Code -->
-<script>
+
+<script type="text/javascript">
 !function() {
   var t;
   if (t = window.driftt = window.drift = window.driftt || [], !t.init) return t.invoked ? void (window.console && console.error && console.error("Drift snippet included twice.")) : (t.invoked = !0,
@@ -31,7 +31,5 @@ use humhub\models\Setting;
 drift.SNIPPET_VERSION = '0.3.1';
 drift.load('ig4sfzx6rufy');
 </script>
-<!-- End of Async Drift Code -->
+
 <?= Html::endTag('div'); ?>
-</div>
-</div>
