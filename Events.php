@@ -11,14 +11,7 @@ class Events extends \yii\base\Object
 
     public static function onAdminMenuInit(\yii\base\Event $event)
     {
-        $event->sender->addItem([
-            'label' => Yii::t('DriftModule.base', 'Drift Settings'),
-            'url' => Url::toRoute('/drift/admin/index'),
-            'group' => 'settings',
-            'icon' => '<i class="fa fa-drift"></i>',
-            'isActive' => Yii::$app->controller->module && Yii::$app->controller->module->id == 'drift' && Yii::$app->controller->id == 'admin',
-            'sortOrder' => 650
-        ]);
+        $event->sender->addItem([]);
     }
 
 public static function addDriftFrame($event)
