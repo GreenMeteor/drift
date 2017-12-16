@@ -19,7 +19,7 @@ return [
             'class' => \humhub\modules\space\widgets\Sidebar::className(),
             'event' => \humhub\modules\space\widgets\Sidebar::EVENT_INIT,
             'callback' => [
-                'humhub\modules\Drift\Events',
+                'humhub\modules\drift\Events',
                 'addDriftFrame'
             ]
         ],
