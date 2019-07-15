@@ -1,20 +1,29 @@
 <?php
+
 namespace humhub\modules\drift;
 
 use Yii;
 use yii\helpers\Url;
-use humhub\modules\drift\widgets\DriftFrame;
+use yii\base\BaseObject;
 use humhub\models\Setting;
+use humhub\modules\drift\Assets;
+use humhub\modules\drift\widgets\DriftFrame;
 
-class Events extends \yii\base\BaseObject
+class Events extends BaseObject
 {
-
-    public static function onAdminMenuInit(\yii\base\Event $event)
+    public static function onAdminMenuInit($event)
     {
-        $event->sender->addItem([]);
+        $event->sender->addItem([
+            'label' => Yii::t('DriftModule.base', 'Drift Settings'),
+            'url' => Url::toRoute('/drift/admin/index'),
+            'group' => 'settings',
+            'icon' => '<i class="fa fa-headphones"></i>',
+            'isActive' => Yii::$app->controller->module && Yii::$app->controller->module->id == 'drift' && Yii::$app->controller->id == 'admin',
+            'sortOrder' => 650
+        ]);
     }
 
-public static function addDriftFrame($event)
+    public static function addDriftFrame($event)
     {
         if (Yii::$app->user->isGuest) {
             return;
